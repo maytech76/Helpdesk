@@ -6,7 +6,7 @@ class Prioridad extends Conectar{
 
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="SELECT *FROM prioridad
+            $sql="SELECT *FROM tm_prioridad
             WHERE est= 1";
             $sql=$conectar->prepare($sql);
             $sql->execute();

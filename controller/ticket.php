@@ -21,9 +21,9 @@ switch ($_GET["op"]) {
             $_POST["usu_id"],
             $_POST["cat_id"],
             $_POST["scat_id"],
+            $_POST["prio_id"],
             $_POST["tick_titulo"],
-            $_POST["tick_descrip"],
-            $_POST["prio_id"]
+            $_POST["tick_descrip"]
         );
 
          if (is_array($datos)==true and count($datos)>0){

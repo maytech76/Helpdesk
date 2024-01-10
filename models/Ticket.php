@@ -2,7 +2,7 @@
   class Ticket extends Conectar{
 
     /* TODO:Insertar nuevo ticket */
-    public function insert_ticket($usu_id, $cat_id, $scat_id, $tick_titulo, $tick_descrip, $prio_id ){
+    public function insert_ticket($usu_id, $cat_id, $scat_id, $prio_id, $tick_titulo, $tick_descrip){
         $conectar =parent::conexion();
         parent::set_names();
         $Sql="call SP_I_NEW_TICK (?,?,?,?,?,?)";
@@ -11,9 +11,9 @@
         $Sql->bindValue(1, $usu_id);
         $Sql->bindValue(2, $cat_id);
         $Sql->bindValue(3, $scat_id);
-        $Sql->bindValue(4, $tick_titulo);
-        $Sql->bindValue(5, $tick_descrip);
-        $Sql->bindValue(6, $prio_id);
+        $Sql->bindValue(4, $prio_id);
+        $Sql->bindValue(5, $tick_titulo);
+        $Sql->bindValue(6, $tick_descrip);
         $Sql->execute();
 
         return $resultado = $Sql->fetchAll(pdo::FETCH_ASSOC);
