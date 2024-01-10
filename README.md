@@ -15,5 +15,20 @@
 
 - Visualizar Sus tikets Asignados por Jefe de Soporte (Admin).
 - Interactuar con clientes por medio de chat Interno del sistema (Historial-Auditoria).
-- Recivira email por tiket asignado.
+- Envio y recepcion de fotos, imagenes, textos con estilos html.
+- Recibirá email por tiket asignado, Reasignado(Re- Abierto)
 - Al cerrar tiket se enviara al cliente la notificacion automaticamente.
+
+
+### Perfiles de Usuario Admin
+
+**Funciones**
+
+- Visualizar todos los tikets Abiertos, Asignados, Cerrados
+- Asignara y Re-Asignara Tikets a Soportistas.
+- Registro de fotos, imagenes, textos con estilos html en Tikets Abiertos.
+- Recibirá email por tiket asignado, Reasignado, Cerrados.
+- Visaulizar Auditorias de Historiales, Tikets, Soporte, Clientes
+- Al cerrar, Abrir o Asignar tiket se enviara al cliente y Soporte Asignadola notificacion automaticamente.
+- Visualizar Reportes Mensuales del Sistema, Calificaciones de Soporte, Nuemeros de tikets Abiertos, Cerrados,
+  Re Abiertos Cada Usuario de Soporte, Categorias con mas tikets 
