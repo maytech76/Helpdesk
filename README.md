@@ -1,4 +1,4 @@
-# sistema Helpdesk mutil proposito
+# Sistema Helpdesk Pos Venta
 
 ### Perfiles de Usuarios
 
@@ -32,3 +32,18 @@
 - Al cerrar, Abrir o Asignar tiket se enviara al cliente y Soporte Asignadola notificacion automaticamente.
 - Visualizar Reportes Mensuales del Sistema, Calificaciones de Soporte, Nuemeros de tikets Abiertos, Cerrados,
   Re Abiertos Cada Usuario de Soporte, Categorias con mas tikets 
+
+
+##Tecnologias Aplicadas
+
+**FrontEnd**
+- Html5.
+-Css
+-JavaScript Cs6
+-Ajax
+-Jquery
+
+**BackEnd**
+-MVC
+-Php V8.1
+-Mysql V.8.0
