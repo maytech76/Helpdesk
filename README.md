@@ -2,11 +2,11 @@
 
 ## Perfiles de Usuarios
 
-- Funciones
-. Visualizar sus Tikets Abiertos.
-. Interactuar con Soporte por medio de Chat interno del sistema.
-. Envio de fotos, imagenes, textos con estilos html.
-. Recepcion de Email por tiket Abierto, Asignacion de Soporte, Tikets Cerrado.
+**Funciones**
+- Visualizar sus Tikets Abiertos.
+- Interactuar con Soporte por medio de Chat interno del sistema.
+- Envio de fotos, imagenes, textos con estilos html.
+- Recepcion de Email por tiket Abierto, Asignacion de Soporte, Tikets Cerrado.
 
 
 ## Perfiles de Usuario Soporte
