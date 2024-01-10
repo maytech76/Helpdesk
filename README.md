@@ -1,7 +1,7 @@
 # Sistema Helpdesk Pos Venta
 
-### Perfiles de Usuarios
 
+### Perfiles de Usuarios
 **Funciones**
 - Visualizar sus Tikets Abiertos.
 - Interactuar con Soporte por medio de Chat interno del sistema.
@@ -9,8 +9,9 @@
 - Recepcion de Email por tiket Abierto, Asignacion de Soporte, Tikets Cerrado.
 
 
-### Perfiles de Usuario Soporte
 
+
+### Perfiles de Usuario Soporte
 **Funciones**
 
 - Visualizar Sus tikets Asignados por Jefe de Soporte (Admin).
@@ -20,8 +21,9 @@
 - Al cerrar tiket se enviara al cliente la notificacion automaticamente.
 
 
-### Perfiles de Usuario Admin
 
+
+### Perfiles de Usuario Admin
 **Funciones**
 
 - Visualizar todos los tikets Abiertos, Asignados, Cerrados
