@@ -4,6 +4,7 @@
  require_once("../models/Categoria.php");
 
  $categoria = new Categoria();
+ $html='';
 
 
  switch ($_GET["op"]) {

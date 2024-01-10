@@ -2,6 +2,7 @@
 require_once("../config/conexion.php");
 require_once("../models/Subcategoria.php");
 $subcategoria = new Subcategoria();
+$html='';
 
 switch ($_GET["op"]) {
     case 'combo':

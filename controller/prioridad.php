@@ -3,6 +3,7 @@ require_once("../config/conexion.php");
 require_once("../models/Prioridad.php");
 $prioridad = new Prioridad();
 
+$html='';
 
 switch ($_GET["op"]) {
 
