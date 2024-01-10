@@ -40,12 +40,12 @@
 
 **FrontEnd**
 - Html5.
--Css
--JavaScript Cs6
--Ajax
--Jquery
+- Css.
+- JavaScript Cs6.
+- Ajax.
+- Jquery.
 
 **BackEnd**
--MVC
--Php V8.1
--Mysql V.8.0
+- MVC.
+- Php V8.1.
+- Mysql V.8.0.
