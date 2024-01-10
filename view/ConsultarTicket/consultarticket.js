@@ -13,7 +13,15 @@ function init(){
 $(document).ready(function(){
 
 
-  
+    /* TODO:Mostramos el listado de categorias */
+   $.post("../../controller/categoria.php?op=combo", function(data, status){
+    $('#cat_id').html(data);
+   })
+
+    /* TODO:Mostramos el listado de prioridad */
+    $.post("../../controller/prioridad.php?op=combo", function(data, status){
+        $('#prio_id').html(data);
+     })
 
 
     $.post("../../controller/usuario.php?op=combo", function(data){
@@ -38,10 +46,10 @@ $(document).ready(function(){
                     'pdfHtml5'
                     ],
             "ajax":{
-                url: '../../controller/ticket.php?op=listar_x_usu',
+                url: '../../controller/ticket.php?op=listar_filtro',
                 type : "post",
                 dataType : "json",
-                data:{ usu_id : usu_id},
+                data:{ tick_titulo:tick_titulo, cat_id:cat_id, prio_id:prio_id},
                 error: function(e){
                      
                 }

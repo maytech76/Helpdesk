@@ -36,7 +36,52 @@ if (isset($_SESSION["usu_id"])){
 			</header>
 
 			<div class="box-typical box-typical-padding">
-				
+			
+				<div class="row d-flex justify-content-center" id="viewuser">
+				   
+						<div class="col-lg-4">
+							<fieldset class="form-group">
+								<label class="form-label font-weight-bold" for="tick_titulo">Titulo</label>
+								<input type="text" class="form-control" id="tick_titulo" name="tick_titulo" placeholder="Ingrese Titulo" required>
+							</fieldset>
+						</div>
+
+						<div class="col-lg-3">
+							<fieldset class="form-group">
+								<label class="form-label font-weight-bold" for="cat_id">Categoria</label>
+								<select class="form-control" id="cat_id" name="cat_id" data-placeholder="Seleccionar">
+									<option label="Seleccionar"></option>
+
+								</select>
+							</fieldset>
+						</div>
+
+						<div class="col-lg-2">
+							<fieldset class="form-group">
+								<label class="form-label font-weight-bold" for="prio_id">Prioridad</label>
+								<select class="form-control" id="prio_id" name="prio_id" data-placeholder="Seleccionar">
+									<option label="Seleccionar"></option>
+
+								</select>
+							</fieldset>
+						</div>
+
+						<div class="col-lg-1">
+							<fieldset class="form-group">
+								<label class="form-label" for="btnfiltrar">&nbsp;</label>
+								<button type="submit" class="btn btn-primary btn-block" id="btnfiltrar">Filtrar</button>
+							</fieldset>
+						</div>
+
+						<div class="col-lg-2">
+							<fieldset class="form-group">
+								<label class="form-label" for="btntodo">&nbsp;</label>
+								<button class="btn btn-warning btn-block" id="btntodo">Ver Todo</button>
+							</fieldset>
+						</div>
+			         
+			     </div>
+			  <hr>
 				
 
 				<div class="box-typical box-typical-padding" id="table">

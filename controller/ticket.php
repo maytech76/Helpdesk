@@ -353,6 +353,64 @@ switch ($_GET["op"]) {
     break;
 
 
+      /* TODO: Listado de tickets,formato json para Datatable JS, filtro avanzado*/
+      case "listar_filtro":
+        $datos=$ticket->filtrar_ticket($_POST["tick_titulo"],$_POST["cat_id"],$_POST["prio_id"]);
+        $data= Array();
+        foreach($datos as $row){
+
+            $sub_array = array();
+            $sub_array[] = $row["tick_id"];
+            $sub_array[] = $row["cat_nom"];
+            $sub_array[] = $row["tick_titulo"];
+
+            $sub_array[] = $row["prio_nom"];
+
+            if ($row["tick_estado"]=="Abierto"){
+                $sub_array[] = '<span class="label label-pill label-success">Abierto</span>';
+            }else{
+                $sub_array[] = '<a onClick="CambiarEstado('.$row["tick_id"].')"><span class="label label-pill label-danger">Cerrado</span><a>';
+            }
+
+            $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_crea"]));
+
+            if($row["fech_asig"]==null){
+                $sub_array[] = '<span class="label label-pill label-default">Sin Asignar</span>';
+            }else{
+                $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_asig"]));
+            }
+
+            if($row["fech_cierre"]==null){
+                $sub_array[] = '<span class="label label-pill label-default">Sin Cerrar</span>';
+            }else{
+                $sub_array[] = date("d/m/Y H:i:s", strtotime($row["fech_cierre"]));
+            }
+
+            if($row["usu_asig"]==null){
+                $sub_array[] = '<a onClick="asignar('.$row["tick_id"].');"><span class="label label-pill label-warning">Sin Asignar</span></a>';
+            }else{
+                $datos1=$usuario->get_usuario_x_id($row["usu_asig"]);
+                foreach($datos1 as $row1){
+                    $sub_array[] = '<span class="label label-pill label-success">'. $row1["usu_nom"].'</span>';
+                }
+            }
+
+            $cifrado = openssl_encrypt($row["tick_id"], $cipher, $key, OPENSSL_RAW_DATA, $iv);
+            $textoCifrado = base64_encode($iv . $cifrado);
+
+            $sub_array[] = '<button type="button" data-ciphertext="'.$textoCifrado.'" id="'.$textoCifrado.'" class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
+            $data[] = $sub_array;
+        }
+
+        $results = array(
+            "sEcho"=>1,
+            "iTotalRecords"=>count($data),
+            "iTotalDisplayRecords"=>count($data),
+            "aaData"=>$data);
+        echo json_encode($results);
+    break;
+
+
 
   }
     ?>

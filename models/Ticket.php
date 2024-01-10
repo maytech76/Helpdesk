@@ -242,7 +242,23 @@
       $sql->bindValue(3, $tick_coment);
       $sql->execute();
       return $resultado=$sql->fetchAll();
-  }
+     }
+
+       /* TODO: Filtro Avanzado de ticket */
+      public function filtrar_ticket($tick_titulo,$cat_id, $prio_id){
+        $conectar= parent::conexion();
+        parent::set_names();
+        $sql="call SP_L_FILTRAR_TICKET (?,?,?)";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, "%".$tick_titulo."%");
+        $sql->bindValue(2, $cat_id);
+        $sql->bindValue(3, $prio_id);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+
+      }
+
+
 
 
 
